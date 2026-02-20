@@ -1,50 +1,57 @@
-# Simulation d'Ondes Électromagnétiques
+# RCS Optimizer
 
-Simulation d'ondes électromagnétiques en 1D utilisant la méthode FDTD (Finite-Difference Time-Domain).
+Optimization of radar cross-section (RCS) using a genetic algorithm (GA) and 1D electromagnetic wave simulation via the FDTD (Finite-Difference Time-Domain) method.
 
-## Prérequis
+**Goal:** find the optimal shape to minimize incident radar waves.
+
+## Prerequisites
 
 - Python 3.x
 - pip
 
 ## Installation
 
-1. Créer et activer l'environnement virtuel :
+1. Create and activate a virtual environment:
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # Linux/macOS
-# ou
+# or
 .venv\Scripts\activate     # Windows
 ```
 
-2. Installer les dépendances :
+2. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
 ## Simulations
 
-Le projet contient trois simulations progressives :
+The project contains three progressive FDTD simulations:
 
-| Fichier | Description |
-|---------|-------------|
-| `src/1.py` | Simulation FDTD de base — impulsion gaussienne à la frontière |
-| `src/2.py` | Source additive au nœud 50 |
-| `src/3.py` | Conditions aux limites absorbantes (ABC) |
+| File | Description |
+|------|-------------|
+| `src/1.py` | Basic FDTD — Gaussian pulse at boundary |
+| `src/2.py` | Additive source at node 50 |
+| `src/3.py` | Absorbing Boundary Conditions (ABC) |
 
-Lancer une simulation :
+Run a simulation:
 ```bash
 python src/1.py
-python src/2.py
-python src/3.py
 ```
 
-## Structure du projet
+## Project Structure
 
 ```
-Simuondes/
-├── src/        # Code source des simulations
-├── tests/      # Tests unitaires
+rcs-optimizer/
+├── src/        # Simulation source code
+├── tests/      # Unit tests
 ├── docs/       # Documentation
 └── requirements.txt
 ```
+
+## Roadmap
+
+- [x] 1D FDTD EM wave simulation
+- [ ] Genetic algorithm for shape optimization
+- [ ] RCS computation
+- [ ] 2D/3D extension
