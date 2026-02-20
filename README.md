@@ -30,23 +30,27 @@ The project contains three progressive FDTD simulations:
 
 | File | Description |
 |------|-------------|
-| `src/1.py` | Basic FDTD — Gaussian pulse at boundary |
-| `src/2.py` | Additive source at node 50 |
-| `src/3.py` | Absorbing Boundary Conditions (ABC) |
+| `src/fdtd_basic.py` | Basic FDTD — Gaussian pulse at boundary |
+| `src/fdtd_source.py` | Additive source at node 50 |
+| `src/fdtd_abc.py` | Absorbing Boundary Conditions (ABC) |
 
 Run a simulation:
 ```bash
-python src/1.py
+python src/fdtd_basic.py
 ```
 
 ## Project Structure
 
 ```
 rcs-optimizer/
-├── src/        # Simulation source code
-├── tests/      # Unit tests
-├── docs/       # Documentation
-└── requirements.txt
+├── src/
+│   ├── fdtd_basic.py    # FDTD de base
+│   ├── fdtd_source.py   # Source additive
+│   └── fdtd_abc.py      # Conditions absorbantes (ABC)
+├── tests/
+├── docs/
+├── requirements.txt
+└── .venv/
 ```
 
 ## Roadmap
