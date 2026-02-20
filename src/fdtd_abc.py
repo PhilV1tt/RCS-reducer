@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 SIZE = 200
 qTime = 0
-maxTime = 200
+maxTime = 300
 imp0 = 377.0
 
 ez = [0.0]*SIZE
@@ -26,7 +26,7 @@ for qTime in range(maxTime):
     for mm in range (1,SIZE):
         ez[mm] = ez[mm]+(hy[mm]-hy[mm-1])*imp0
 
-    #utilisation de la source additive au noeud 50
+    #utilisation de la source additive au noeud 50 (pulsion gaussienne)
     ez[50] += math.exp(-(qTime - 30.) * (qTime - 30.) / 100.)
 
     if qTime % 10 == 0:  # Tous les 10 pas de temps

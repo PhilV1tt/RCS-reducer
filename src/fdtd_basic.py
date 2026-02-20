@@ -17,6 +17,7 @@ for qTime in range(maxTime):
         hy[mm] = hy[mm] + (ez[mm + 1] - ez[mm]) / imp0
     for mm in range (1,SIZE):
         ez[mm] = ez[mm]+(hy[mm]-hy[mm-1])*imp0
+    #pulsion gaussienne (source)    
     ez[0] = math.exp(-(qTime - 30.0) * (qTime - 30.0) / 100.0)
 
     if qTime % 10 == 0:  # Tous les 10 pas de temps
